@@ -1,0 +1,153 @@
+*{
+	margin:0;
+	padding:0;	
+	box-sizing: border-box;
+}
+
+/* Keyframes */
+@keyframes movetoleft{
+	from{
+		right:-40vw;
+	}
+	to{
+		right: 110vw;
+	}
+}
+@keyframes movetoupthendown{
+	0%{
+		transform: translateY(100%);
+	}
+	50%{
+		transform: translateY(-10%);
+	}
+	100%{
+		transform: translateY(100%);
+	}
+}
+@keyframes darker{
+	from{
+		background:#95C8D8;
+	}
+	to{
+		background:#4A666F;
+	}
+}
+
+/* Start */
+#container{
+	width:100vw;
+	height:100vh;
+	position:absolute;
+}
+
+/* Sky */
+#sky{
+	background:#95C8D8;
+	height: 50vh;
+	z-index:0;
+	position:relative;
+}
+
+.clouds{
+	height:100px;
+	top:100px;
+	animation: movetoleft 15s forwards infinite linear;
+	position:fixed;
+	z-index:2;
+}
+#cloud2{	
+	animation: movetoleft 30s forwards infinite linear;
+	transform:translateY(120px) scale(.7);
+}
+#cloud3{	
+	animation: movetoleft 50s forwards infinite linear;
+	transform:translateY(220px) scale(.9);
+	right: -100vw;
+}
+#cloud4{	
+	animation: movetoleft 60s forwards infinite linear;
+	transform:translateY(120px) scale(.8);
+}
+#cloud5{	
+	animation: movetoleft 80s forwards infinite linear;
+	transform:translateY(220px) scale(.9);
+	right: -100vw;
+}
+#cloud6{	
+	animation: movetoleft 20s forwards infinite linear;
+	transform:translateY(-20px) scale(.5);
+}
+#cloud7{	
+	animation: movetoleft 10s forwards infinite linear;
+	transform:translateY(-50px) scale(1.5);
+}
+#sun{
+	width: 250px;
+	height: 250px;
+	position: fixed;
+	top: 0px;
+	right: -80%;
+	animation: movetoleft 6s forwards infinite linear, movetoupthendown 6s forwards infinite;
+	transform:scale(.8);
+}
+#charzard{
+	height:100px;
+	position:fixed;
+	top: 10%;
+	right: -40%;
+	animation: movetoleft 10s 6s infinite;
+	z-index: 2;
+}
+
+
+
+/* Water */
+#water{
+	height: 15vh;
+	width: 100vw;
+	background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+	position:absolute;
+}
+
+/* Road */
+#road{
+	height: 35vh;
+	background:#d6ae7b;
+	position:absolute;
+	bottom: 0;
+	width: 100vw;
+	border-top: 5px solid ;
+}
+#line{
+	position:absolute;
+	border-bottom: 7px dashed white;
+	top: 50%;
+	z-index: 1;
+	width: 100vw;
+}
+.roadcharacters{
+	z-index: 2;
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	left:0;
+}
+
+@keyframes movetoright{
+	from{
+		left:-40vw;
+	}
+	to{
+		left: 110vw;
+	}
+}
+
+#pikachu{
+	bottom: 25%;
+	animation: movetoright 5s forwards infinite linear;
+}
+#eeve{
+	transform: scaleX(-1);
+	bottom: 5%;
+	animation: movetoright 8s forwards infinite linear;
+}
